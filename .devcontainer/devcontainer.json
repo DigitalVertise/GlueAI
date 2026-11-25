@@ -1,0 +1,24 @@
+{
+  "name": "GlueAI Linux Desktop",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "Linux Desktop (noVNC)",
+      "onAutoForward": "openBrowser",
+      "visibility": "private"
+    }
+  },
+  "postStartCommand": "bash .devcontainer/start-desktop.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode-remote.remote-containers",
+        "ms-python.python"
+      ]
+    }
+  }
+}
