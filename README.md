@@ -22,6 +22,16 @@ It provides:
   - Pipelines
   - Health Checks
 
+## Shared model gateway
+
+A LiteLLM proxy foundation is provided at [gateway/litellm](gateway/litellm/README.md).
+It gives DV-AIOS consumers one OpenAI-compatible model endpoint and supports
+optional FreeLLMAPI, NVIDIA NIM, OpenRouter and local Ollama upstreams.
+FreeLLMAPI is optional; provider credentials are configured outside Git in
+`gateway/litellm/.env`.
+
+See [the shared gateway architecture and rollout contract](docs/SHARED-MODEL-GATEWAY.md).
+
 ## Setup
 
 1. Copy `.env.example` to `.env`
